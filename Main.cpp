@@ -167,7 +167,7 @@ void registerCallbacks(void)
 
 int main(int argc, char** argv)
 {
-    initCardinalMatrix(0); // Initialize cardinal matrix with t = 0
+    initCardinalMatrix(0.1); // Initialize cardinal matrix with t = 0
     initControlPoints();   // Initialize control points
 
     /* Initialize OpenGL */
