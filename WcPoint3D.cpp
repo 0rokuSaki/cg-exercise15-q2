@@ -1,3 +1,11 @@
+/*****************************************************************//**
+ * \file   WcPoint3D.cpp
+ * \brief  Function definitions for class WcPoint3D.
+ * 
+ * \author aaron
+ * \date   May 2023
+ *********************************************************************/
+
 #include "WcPoint3D.h"
 
 WcPoint3D::WcPoint3D() :
@@ -10,17 +18,17 @@ WcPoint3D::WcPoint3D(GLdouble x, GLdouble y, GLdouble z) :
 {
 }
 
-GLdouble WcPoint3D::getX()
+GLdouble WcPoint3D::getX() const
 {
 	return _x;
 }
 
-GLdouble WcPoint3D::getY()
+GLdouble WcPoint3D::getY() const
 {
 	return _y;
 }
 
-GLdouble WcPoint3D::getZ()
+GLdouble WcPoint3D::getZ() const
 {
 	return _z;
 }
@@ -38,4 +46,14 @@ void WcPoint3D::setY(GLdouble y)
 void WcPoint3D::setZ(GLdouble z)
 {
 	_z = z;
+}
+
+WcPoint3D WcPoint3D::operator*(const GLdouble val) const
+{
+	return WcPoint3D(val * _x, val * _y, val * _z);
+}
+
+WcPoint3D WcPoint3D::operator+(const WcPoint3D& other) const
+{
+	return WcPoint3D(_x + other._x, _y + other._y, _z + other._z);
 }
