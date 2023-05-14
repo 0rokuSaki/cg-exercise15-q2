@@ -1,4 +1,4 @@
-# CG-Maman13
+# CG-Maman15-Q2
 My solution for Q2 in exersice ('Maman') 15 in Computer Graphics (20562) course. </br>
 This program draws a 2D Cardinal Spline with a given set of control poitns and a tention parameter.
 Calculations are based on the formulas in page 421 in the book
